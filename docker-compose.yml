@@ -1,0 +1,13 @@
+version: '3.6'
+
+services:
+  db:
+    image: mysql:5.6
+    container_name: db_app_devOps
+    command: --init-file /data/application/schema.sql
+    volumes: 
+      - ./schema.sql:/data/application/schema.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports: 
+      - 3306:3306
