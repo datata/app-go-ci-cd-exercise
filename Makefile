@@ -9,8 +9,8 @@ run:
 	 cd cmd/geekshubs-library && GIN_MODE=${GIN_MODE} DB=${DB} go run main.go
 
 test:
-	go get github.com/mfridman/tparse
-	cd pkg && CGO_ENABLED=${CGO_ENABLED} go test ./... -json -cover | tparse -all
+##	go get github.com/mfridman/tparse
+	cd pkg && CGO_ENABLED=${CGO_ENABLED} go test ./...
 
 lint:
 	go get -u golang.org/x/lint/golint
