@@ -14,3 +14,11 @@ jobs:
         with:
           go-version: '^1.13.1' # The Go version to download (if necessary) and use.
       - run: go version
+      - run: make lint
+      - run: make test
+      - run: make build
+      - run: docker-compose up -d
+      - name: timeOut
+          timeout-minutes: 0.25
+          run: curl --fail http://locahost:8080/api/ 
+      

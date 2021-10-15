@@ -22,3 +22,4 @@ services:
       DB: root:password@(db_app_golang:3306)/library
     links:
       - db
+    depends_on: [db]
