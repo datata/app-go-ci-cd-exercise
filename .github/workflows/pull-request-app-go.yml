@@ -18,7 +18,5 @@ jobs:
       - run: make test
       - run: make build
       - run: docker-compose up -d
-      - name: timeOut
-          timeout-minutes: 0.25
-          run: curl --fail http://locahost:8080/api/ 
+      - run: sleep 10 && curl --fail http://localhost:8080/api/
       
