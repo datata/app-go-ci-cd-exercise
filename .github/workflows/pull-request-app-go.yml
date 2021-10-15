@@ -18,4 +18,7 @@ jobs:
       - run: make test
       - run: make build
       - run: docker-compose up -d
-      - run: curl --fail http://mysql:8080/api/
+      - name: timeOut
+          timeout-minutes: 0.25
+          run: curl --fail http://mysql:8080/api/ 
+      
