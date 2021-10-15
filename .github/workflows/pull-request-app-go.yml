@@ -20,5 +20,5 @@ jobs:
       - run: docker-compose up -d
       - name: timeOut
           timeout-minutes: 0.25
-          run: curl --fail http://mysql:8080/api/ 
+          run: curl --fail http://locahost:8080/api/ 
       
