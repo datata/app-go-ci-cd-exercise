@@ -18,4 +18,5 @@ jobs:
       - run: make test
       - run: make build
       - run: docker-compose up -d
+      - run: sleep 10 && curl --fail http://localhost:8080/api/
       
