@@ -19,6 +19,6 @@ jobs:
       - run: make build
       - run: docker-compose up -d
       - name: timeOut
-          timeout-minutes: 0.25
-          run: curl --fail http://locahost:8080/api/ 
+        timeout-minutes: 0.25
+        run: curl --fail http://locahost:8080/api/ 
       
